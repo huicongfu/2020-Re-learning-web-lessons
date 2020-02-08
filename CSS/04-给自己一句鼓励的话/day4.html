@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>给自己一句鼓励的话</title>
+    <style>
+        body{
+            background-color: #2A3950;
+        }
+        #head{
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #contents{
+            margin: 20px auto 20px auto;
+            
+        }
+        #contents p {
+            color: turquoise;
+            margin: 10px auto 10px 20px;
+        }
+        #button{
+            align-content: center;
+            border: 1px solid white;
+            border-radius: 4px;
+            background-color: violet;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 30px;
+            margin: 40px 50px;
+        }
+    </style>
+    <script>
+        let arr = [
+        '我要坚持完成前端小课第一阶段的内容！',
+        '我的目标是学好前端！',
+        '大家共同努力！',
+        '前端小课开课啦！',
+        '今天是学习的第四天，继续加油！',
+        '武汉加油！'
+        ];
+        function btnClick() {
+            let index = Math.floor(Math.random() * arr.length + 0);
+            let div = document.createElement('div');
+            let textNode = document.createTextNode(arr[index]);
+            div.appendChild(textNode);
+            div.style.color = "#fe7235";
+            div.style.lineHeight = 2;
+            let cont = document.getElementById("contents");
+            cont.appendChild(div);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="head">给自己一句鼓励的话</div>
+    <div id="contents"></div>
+    <div id="button" onclick="btnClick()">鼓励自己一下</div>
+</body>
+</html>
