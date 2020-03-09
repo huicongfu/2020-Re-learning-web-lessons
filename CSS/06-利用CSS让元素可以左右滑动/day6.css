@@ -1,0 +1,60 @@
+/*清除标签默认边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* class 的选择器，以 . 开头获取 */
+.topTitle {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.line {
+    background-color: lightgray;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+#navigation {
+    /* 不折叠一直显示 */
+    white-space: nowrap; 
+    /* CSS 有一个属性 overflow，它可以控制对于超出可视区域的内容如何处理 */
+    /* x轴可以滚动 */
+    overflow-x: scroll;
+    /* y轴内容超出隐藏 */
+    overflow-y: hidden;
+    /* height: 44px; */
+    background: green;
+    color: white;
+}
+
+/* 伪选择器 */
+div > span {
+    font-size: 20px;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+/* div 下的第一个元素 */
+div :first-child {
+    margin-left: 15px;
+}
+/* div 下的最后一个元素 */
+div :last-child {
+    margin-right: 15px;
+}
+
+#button {
+    height: 40px;
+    color: white;
+    text-align: center;
+    background-color: blue;
+    width: 200px;
+    margin: 100px auto;
+    border-radius: 4px;
+    line-height: 40px;
+}
+
+#d {
+    color: red;
+}
